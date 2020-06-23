@@ -7,29 +7,32 @@
                    required v-model='value'>
         </div>
         <div class="hor">
-            <input type="submit" name="submit" class="submit" @click='search()' value="提交">
+            <input type="submit" name="submit" class="submit" @click='search()' value="提交">45das746sed74869
+
         </div>
         <div class="container_bottom_right">
             <p class="search_btu" @click='manager()'>查询管理</p>
         </div>
     </div>
     <div class="container">
-        <div class="hor1">
-            <p class="p_left">我单位录入的失范记录</p>
-            <p class="p_left_1">(不含已删除的记录)</p>
-            <p class="add_btu" @click='add()'>新增</p>
-            <p class="clear_fix"></p>
-            <div class="container_hor">
-                <div v-for="(i,index) in num" :key="index" class="card">
-                    <p style="text-align: left">王汪</p>
-                    <p style="text-align: left">成都市第七中学</p>
-                    <div style="padding-top: 60px">
-                        <p style="color: chocolate;float: left">刑事处罚</p>
-                        <p style="float: left;margin-left: 40px">2020-04-25</p>
-                    </div>
-                </div>
-                <p class="clear_fix"></p>
+        <div class="container_1">
+            <div style="text-align: left">
+                <span class="p_left">我单位录入的失范记录</span>
+                <span class="p_left_1">(不含已删除的记录)</span>
             </div>
+            <span class="add_btu" @click='add()'>新增</span>
+        </div>
+        <p class="clear_fix"></p>
+        <div class="container_hor">
+            <div v-for="(i,index) in num" :key="index" class="card">
+                <p style="text-align: left">王汪</p>
+                <p style="text-align: left">成都市第七中学</p>
+                <div style="padding-top: 60px">
+                    <p style="color: chocolate;float: left">刑事处罚</p>
+                    <p style="float: left;margin-left: 40px">2020-04-25</p>
+                </div>
+            </div>
+            <p class="clear_fix"></p>
         </div>
     </div>
 
@@ -40,22 +43,24 @@
             <p class="clear_fix"></p>
             <p style="text-align:left">今天</p>
             <div>
-                <p v-for="(i,index) in tr_num" :key="index" class="tr" style="text-align: left">15:23 成都市教育局 <span
-                        :style="{color:getColor(index)}">{{getType(index)}}</span> 成都七中-汪汪 的 失范记录</p>
+                <p v-for="(i,index) in tr_num" :key="index" class="tr" style="text-align: left">
+                    15:23 成都市教育局 <span
+                        :style="{color:getColor(index)}">{{getType(index)}}</span> 成都七中-汪汪 的 失范记录
+                </p>
 
-              <!--  <div v-for="(i,index) in tr_num" :key="index" class="tr">-->
-                   <!-- <p style="text-align: left">15:23 成都市教育局 <span
-                            style="color: chocolate">新增</span> 成都七中-汪汪 的 失范记录</p>
-                    <p style="text-align: left">15:23 成都市教育局 <span
-                            style="color: #333fff">修改</span> 成都七中-汪汪 的 失范记录</p>
-                    <p style="text-align: left">15:23 成都市教育局 <span
-                            style="color: chocolate">新增</span> 成都七中-汪汪 的 失范记录</p>-->
+                <!--  <div v-for="(i,index) in tr_num" :key="index" class="tr">-->
+                <!-- <p style="text-align: left">15:23 成都市教育局 <span
+                         style="color: chocolate">新增</span> 成都七中-汪汪 的 失范记录</p>
+                 <p style="text-align: left">15:23 成都市教育局 <span
+                         style="color: #333fff">修改</span> 成都七中-汪汪 的 失范记录</p>
+                 <p style="text-align: left">15:23 成都市教育局 <span
+                         style="color: chocolate">新增</span> 成都七中-汪汪 的 失范记录</p>-->
 
-              <!--  </div>-->
+                <!--  </div>-->
                 <p class="clear_fix"></p>
             </div>
         </div>
-        </div>
+    </div>
 
     </tbody>
 
@@ -69,7 +74,7 @@
                 num: 1,
                 type: '新增',
                 color1: "#d269e1",
-                tr_num:1
+                tr_num: 1
             }
 
         },
@@ -94,27 +99,27 @@
             ,
             addItem() {
                 this.tr_num++
-                if(this.tr_num%2===0){
+                if (this.tr_num % 2 === 0) {
                     this.type = "新增"
                     this.color1 = "#d269e1";
-                }else {
+                } else {
                     this.type = "修改"
                     this.color1 = "#333fff";
                 }
             }
             ,
             getType(index) {
-                if(index%2===0){
+                if (index % 2 === 0) {
                     return "新增"
-                }else {
+                } else {
                     return "修改"
                 }
-            } ,
+            },
             getColor(index) {
-                if(index%2===0){
-                    return   "#d269e1";
-                }else {
-                    return   "#333fff";
+                if (index % 2 === 0) {
+                    return "#d269e1";
+                } else {
+                    return "#333fff";
                 }
             }
         }
@@ -159,6 +164,7 @@
         margin-right: 15%;
     }
 
+
     .title {
         padding-top: 90px;
     }
@@ -179,11 +185,14 @@
     }
 
     .p_left {
-        float: left;
+        padding-left: 20px;
+        padding-top: 15px;
+        display: inline-block;
+        text-align: start !important;
     }
 
     .p_left_1 {
-        float: left;
+        display: inline-block;
         @include sc(10 sp, dimgrey)
     }
 
@@ -200,11 +209,11 @@
     }
 
     .add_btu {
+        display: inline-block;
         @include sc(15 sp, #333fff);
-        text-align: end;
         padding-right: 20px;
         padding-top: 15px;
-        float: end;
+        float: right;
     }
 
     .container_hor {
@@ -227,6 +236,13 @@
         margin: 20px;
     }
 
+    .container_1 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*.container_1:last-child > div:last-child {
+    }*/
 
     a {
         color: #42b983;
