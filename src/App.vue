@@ -4,6 +4,7 @@
 
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
     <Student msg="师德师风失范查询"/>
+    <i class="ico ico">12111111</i>
   </div>
 </template>
 
@@ -26,8 +27,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
 }
+  .ico-aaa{
+
+  }
 </style>

@@ -1,12 +1,12 @@
 <template>
     <div id="content">
-    <div id="u_start">
-        <li rel="noopener"> <img alt="Vue logo" src="./../assets/icon_1.png"></li>
-        <li rel="noopener">{{msg}}</li>
+    <div  id="u_start">
+        <span > <img style="transform: translateY(-2px)" alt="Vue logo" src="./../assets/icon_1.png"></span>
+        <span style="vertical-align: top">{{msg}}</span>
     </div>
     <div  id="u_end">
-        <li >成都市教育局</li>
-        <li rel="noopener"> <img alt="Vue logo" src="./../assets/icon_2.png"></li>
+        <span style="vertical-align: top;margin-inline-end: 5px;font-size: 13px;color: #B8B7B5" >成都市教育局</span>
+        <span > <img alt="Vue logo" style="transform: translateY(-1px)" src="./../assets/icon_2.png"></span>
     </div>
     </div>
 </template>
@@ -22,23 +22,16 @@
 
 <style scoped>
     #u_end{
-        display: block;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-
     }
 
     #u_start{
-        display: block;
-        position: absolute;
-        left: 0px;
-        top: 0px;
     }
 
     #content {
-
-    display: block;
+        display: flex;
+        justify-content: space-between;
+        padding-inline-start: 20px;
+        padding-inline-end: 20px;
     }
     li {
         display: inline-block;
