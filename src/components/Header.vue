@@ -2,7 +2,7 @@
     <div id="content">
     <div  id="u_start">
         <span > <img style="transform: translateY(-2px)" alt="Vue logo" src="./../assets/icon_1.png"></span>
-        <span style="vertical-align: top">{{msg}}</span>
+        <span style="vertical-align: top;font-weight: bold">{{msg}}</span>
     </div>
     <div  id="u_end">
         <span style="vertical-align: top;margin-inline-end: 5px;font-size: 13px;color: #B8B7B5" >成都市教育局</span>

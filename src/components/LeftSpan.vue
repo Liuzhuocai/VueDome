@@ -1,5 +1,6 @@
 <template  >
-    <span class="ls" >{{msg}}<i style="transform: translateX(3px);background-image:url('../assets/icon_3.png');width: 14px;height: 14px"></i></span>
+  <!--  <span class="ls" >{{msg}}<i style="transform: translateX(3px);background-image:url('../assets/icon_3.png');width: 14px;height: 14px"></i></span>-->
+    <span class="ls" >{{msg}}<img style="transform: translateX(3px)" src='../assets/icon_3.png'></span>
 </template>
 
 <script>
